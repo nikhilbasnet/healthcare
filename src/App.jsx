@@ -14,7 +14,6 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 
 
-
 function Layout({ children }) {
   return (
     <div className="font-sans min-h-screen flex flex-col">
@@ -38,6 +37,9 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/consult" element={<Consultation />} />
+          
+
 
         </Routes>
       </Layout>

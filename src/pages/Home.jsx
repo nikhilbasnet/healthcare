@@ -51,32 +51,40 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="p-6">
-        <h3 className="text-2xl font-bold text-gray-800 mb-4">
-          Popular Health Packages
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { label: "Bone & Joint", icon: UserCheck },
-            { label: "Cardiac Care", icon: Heart },
-            { label: "Child Health", icon: Users },
-            { label: "COVID‑19 PCR", icon: ShieldCheck },
-          ].map((pkg, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded shadow p-4 hover:shadow-md"
-            >
-              <div className="flex items-center font-semibold text-teal-700">
-                <pkg.icon className="w-5 h-5 text-teal-600 mr-2" />
-                {pkg.label}
-              </div>
-              <button className="mt-2 text-sm text-teal-600 underline">
-                View Packages
-              </button>
-            </div>
-          ))}
+      {/* Features Section */}
+<section className="p-6">
+  <h3 className="text-2xl font-bold text-gray-800 mb-4">
+    Popular Health Packages
+  </h3>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    {[
+      { label: "Bone & Joint", icon: UserCheck },
+      { label: "Cardiac Care", icon: Heart },
+      { label: "Child Health", icon: Users },
+      { label: "COVID‑19 PCR", icon: ShieldCheck },
+    ].map((pkg, idx) => (
+      <div
+        key={idx}
+        className="bg-white rounded shadow p-4 hover:shadow-md"
+      >
+        <div className="flex items-center font-semibold text-teal-700">
+          <pkg.icon className="w-5 h-5 text-teal-600 mr-2" />
+          {pkg.label}
         </div>
-      </section>
+
+        {/* ⬇︎ change button → Link */}
+        <Link
+          to="/packages"
+          className="mt-2 inline-block text-sm text-teal-600 underline"
+        >
+          View Packages
+        </Link>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose Us - merged card */}
       <section className="bg-gray-100 p-6">
