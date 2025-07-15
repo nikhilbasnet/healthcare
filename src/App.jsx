@@ -12,18 +12,36 @@ import AskQuestion from "./pages/AskQuestion";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About"
 import Contact from "./pages/Contact"
+import FindDoctor from "./pages/FindDoctor";
+import SearchResults from "./pages/SearchResult";
+import SearchBar from "./components/SearchBar";
+import Login from "./pages/Login";
 
 
+// function Layout({ children }) {
+//   return (
+//     <div className="font-sans min-h-screen flex flex-col">
+//       <Header />
+//       <main className="flex-1">{children}</main>
+//       <Footer />
+//     </div>
+//   );
+// }
 function Layout({ children }) {
   return (
     <div className="font-sans min-h-screen flex flex-col">
       <Header />
+
+      {/* ✅ Show SearchBar globally (on every page) */}
+      <div className="p-4 bg-gray-50">
+        <SearchBar />
+      </div>
+
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );
 }
-
 export default function App() {
   return (
     <Router>
@@ -37,7 +55,10 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/consult" element={<Consultation />} />
+          <Route path ="/find" element ={<FindDoctor/>} />
+          <Route path="/search" element={<SearchResults />} />
+          <Route path="/login" element={<Login />} />
+          
           
 
 

@@ -15,16 +15,8 @@ import {
 export default function Home() {
   return (
     <>
-      {/* Search Bar */}
-      <div className="p-4 bg-gray-50 flex justify-center">
-        <div className="w-full max-w-xl">
-          <input
-            type="text"
-            placeholder="Search doctors, services, packages..."
-            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
-          />
-        </div>
-      </div>
+      
+
 
       {/* Hero Section */}
       <section className="bg-gray-50 p-6 text-center">
@@ -36,7 +28,7 @@ export default function Home() {
             { label: "Book Appointment", icon: Calendar, path: "/book" },
             { label: "Online Consultation", icon: Video, path: "/consult" },
             { label: "Health Packages", icon: PackageIcon, path: "/packages" },
-            { label: "Find a Doctor", icon: UserCheck, path: "/" },
+            { label: "Find a Doctor", icon: UserCheck, path: "/find" },
           ].map((item, idx) => (
             <Link
               key={idx}
@@ -52,38 +44,38 @@ export default function Home() {
 
       {/* Features Section */}
       {/* Features Section */}
-<section className="p-6">
-  <h3 className="text-2xl font-bold text-gray-800 mb-4">
-    Popular Health Packages
-  </h3>
+      <section className="p-6">
+        <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          Popular Health Packages
+        </h3>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-    {[
-      { label: "Bone & Joint", icon: UserCheck },
-      { label: "Cardiac Care", icon: Heart },
-      { label: "Child Health", icon: Users },
-      { label: "COVID‑19 PCR", icon: ShieldCheck },
-    ].map((pkg, idx) => (
-      <div
-        key={idx}
-        className="bg-white rounded shadow p-4 hover:shadow-md"
-      >
-        <div className="flex items-center font-semibold text-teal-700">
-          <pkg.icon className="w-5 h-5 text-teal-600 mr-2" />
-          {pkg.label}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { label: "Bone & Joint", icon: UserCheck },
+            { label: "Cardiac Care", icon: Heart },
+            { label: "Child Health", icon: Users },
+            { label: "COVID‑19 PCR", icon: ShieldCheck },
+          ].map((pkg, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded shadow p-4 hover:shadow-md"
+            >
+              <div className="flex items-center font-semibold text-teal-700">
+                <pkg.icon className="w-5 h-5 text-teal-600 mr-2" />
+                {pkg.label}
+              </div>
+
+              {/* ⬇︎ change button → Link */}
+              <Link
+                to="/packages"
+                className="mt-2 inline-block text-sm text-teal-600 underline"
+              >
+                View Packages
+              </Link>
+            </div>
+          ))}
         </div>
-
-        {/* ⬇︎ change button → Link */}
-        <Link
-          to="/packages"
-          className="mt-2 inline-block text-sm text-teal-600 underline"
-        >
-          View Packages
-        </Link>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
 
 
       {/* Why Choose Us - merged card */}

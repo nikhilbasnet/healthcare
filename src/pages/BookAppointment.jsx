@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";  
 import {
   CalendarDays,
   User,
@@ -10,23 +12,49 @@ import {
 } from "lucide-react";
 
 export default function BookAppointment() {
+  /* -------------------------------------------------
+     1) Grab passed specialty from navigation state
+  ------------------------------------------------- */
+  const location = useLocation();
+  const preselectedDept = location.state?.specialty || "";
+
+  /* -------------------------------------------------
+     2) Form state — initialize department with preselected
+  ------------------------------------------------- */
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    department: "",
+    department: preselectedDept,
     doctor: "",
     symptoms: "",
     date: "",
   });
 
-  const departments = ["General Physician", "Cardiology", "Pediatrics", "Dermatology"];
+  /* -------------------------------------------------
+     3) Options
+  ------------------------------------------------- */
+  const departments = ["General Physician", "Cardiology", "Pediatrics", "Dermatology","Orthopedic"];
   const doctors = {
     "General Physician": ["Dr. Sita Sharma", "Dr. Raj Thapa"],
-    Cardiology: ["Dr. Arjun KC", "Dr. Anil Rana"],
-    Pediatrics: ["Dr. Bina Shrestha", "Dr. Milan Khadka"],
+    Cardiology: ["Dr. Aayush Shrestha", "Dr. Anil Rana"],
+    Pediatrics: ["Dr. Kriti Rana", "Dr. Milan Khadka"],
     Dermatology: ["Dr. Suman Lama", "Dr. Asha Singh"],
+    Orthopedic: ["Dr. Nisha Singh", "Dr. Sandy Smith"],
   };
+
+  /* -------------------------------------------------
+     4) Reset doctor field if department changes
+  ------------------------------------------------- */
+  useEffect(() => {
+  if (preselectedDept && doctors[preselectedDept]) {
+    setForm((prev) => ({
+      ...prev,
+      department: preselectedDept,
+      doctor: doctors[preselectedDept][0], // Auto-select first doctor
+    }));
+  }
+}, [preselectedDept]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +63,9 @@ export default function BookAppointment() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Appointment Booked! (Demo only)");
+    alert(
+      `Appointment booked!\n\nDept: ${form.department}\nDoctor: ${form.doctor || "TBD"}`
+    );
   };
 
   return (
