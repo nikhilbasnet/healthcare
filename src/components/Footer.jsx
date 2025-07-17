@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-teal-700 text-white p-6 mt-10">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
-          <h4 className="font-bold">HamroDoctor</h4>
+          <h4 className="font-bold">Digital HealthCare System</h4>
           <p>Providing trusted healthcare information and services in Nepal.</p>
         </div>
         <div>
@@ -33,11 +33,11 @@ export default function Footer() {
         <div>
           <h4 className="font-bold">Contact</h4>
           <p>Phone: +977‑1‑1234567</p>
-          <p>Email: support@hamrodoctor.com</p>
+          <p>Email: support@digitalhealthcaresystem.com</p>
         </div>
       </div>
       <div className="mt-6 text-center text-sm text-gray-300">
-        © 2025 HamroDoctor. All rights reserved.
+        © 2025 DigitalHealthCareSystem. All rights reserved.
       </div>
     </footer>
   );

@@ -83,7 +83,7 @@ export default function Home() {
         <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Choose Us?</h3>
         <div className="bg-white p-6 rounded shadow">
           <p className="text-gray-700 mb-4">
-            HamroDoctor offers Nepal’s largest network of verified medical
+            Digital HealthCare System offers Nepal’s largest network of verified medical
             professionals, responsive customer support, industry‑grade security,
             and the trust of thousands. Enjoy a secure, smooth, and reliable
             healthcare experience at your fingertips.
