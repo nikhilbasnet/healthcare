@@ -13,7 +13,7 @@ export default function Header() {
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <h1 className="text-2xl font-bold text-teal-600">
-          <Link to="/" onClick={closeMenu}>HamroDoctor</Link>
+          <Link to="/" onClick={closeMenu}>DHS</Link>
         </h1>
 
         {/* Mobile Hamburger */}
