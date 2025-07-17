@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // You can also use Heroicons or SVG
+import { Menu, X } from "lucide-react"; 
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

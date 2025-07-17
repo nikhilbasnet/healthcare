@@ -9,7 +9,7 @@ export default function SearchResults() {
     <div className="p-4 max-w-xl mx-auto">
       <h1 className="text-xl font-bold mb-4">Search Results</h1>
       <p>Showing results for: <strong>{query}</strong></p>
-      {/* Your search results UI */}
+      {/*  search results UI */}
     </div>
   );
 }

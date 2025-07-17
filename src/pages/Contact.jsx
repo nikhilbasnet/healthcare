@@ -101,7 +101,7 @@ export default function Contact() {
 
           {/* Placeholder for reCAPTCHA */}
           <div className="mb-4">
-            {/* Integrate Google reCAPTCHA here */}
+            {/* Integrate Google reCAPTCHA here use garney bhaye */}
             <div className="bg-gray-100 border border-gray-300 rounded p-4 text-center text-gray-500 text-sm">
               reCAPTCHA placeholder
             </div>

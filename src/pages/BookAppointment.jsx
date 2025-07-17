@@ -12,15 +12,11 @@ import {
 } from "lucide-react";
 
 export default function BookAppointment() {
-  /* -------------------------------------------------
-     1) Grab passed specialty from navigation state
-  ------------------------------------------------- */
+
   const location = useLocation();
   const preselectedDept = location.state?.specialty || "";
 
-  /* -------------------------------------------------
-     2) Form state — initialize department with preselected
-  ------------------------------------------------- */
+ 
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -31,9 +27,7 @@ export default function BookAppointment() {
     date: "",
   });
 
-  /* -------------------------------------------------
-     3) Options
-  ------------------------------------------------- */
+
   const departments = ["General Physician", "Cardiology", "Pediatrics", "Dermatology","Orthopedic"];
   const doctors = {
     "General Physician": ["Dr. Sita Sharma", "Dr. Raj Thapa"],
@@ -43,9 +37,9 @@ export default function BookAppointment() {
     Orthopedic: ["Dr. Nisha Singh", "Dr. Sandy Smith"],
   };
 
-  /* -------------------------------------------------
+  /* 
      4) Reset doctor field if department changes
-  ------------------------------------------------- */
+   */
   useEffect(() => {
   if (preselectedDept && doctors[preselectedDept]) {
     setForm((prev) => ({

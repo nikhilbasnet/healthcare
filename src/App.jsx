@@ -32,7 +32,7 @@ function Layout({ children }) {
     <div className="font-sans min-h-screen flex flex-col">
       <Header />
 
-      {/* ✅ Show SearchBar globally (on every page) */}
+      {/* yesle chai Show garxa  SearchBar globally (on every page) */}
       <div className="p-4 bg-gray-50">
         <SearchBar />
       </div>

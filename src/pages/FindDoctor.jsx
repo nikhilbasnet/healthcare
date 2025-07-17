@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Add this
+import { useNavigate } from "react-router-dom"; 
 import { Search, MapPin, Stethoscope, Phone } from "lucide-react";
 
 const doctors = [
@@ -30,9 +30,9 @@ const doctors = [
 ];
 
 export default function FindDoctor() {
-  const navigate = useNavigate(); // ✅ Use navigate hook
+  const navigate = useNavigate(); // Use navigate hook
 
-  // ✅ This sends specialty as router state
+  // This sends specialty as router state
   const handleBook = (specialty) => {
     navigate("/book", { state: { specialty } });
   };
@@ -73,7 +73,7 @@ export default function FindDoctor() {
             </p>
             <button
               className="mt-4 bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 w-full"
-              onClick={() => handleBook(doc.specialty)} // ✅ trigger with specialty
+              onClick={() => handleBook(doc.specialty)} // trigger with specialty
             >
               Book Appointment
             </button>
