@@ -16,7 +16,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="text-gray-700 max-w-xl leading-relaxed">
-            Hamro Doctor is the{" "}
+            Digital HealthCare System is the{" "}
             <strong>First Online Healthcare Service Provider</strong> from Ascol where patients
             can consult certified medical personnel and get additional{" "}
             <strong>health related</strong> services along with other information related to health
@@ -46,7 +46,7 @@ export default function Contact() {
               <Mail className="w-6 h-6 text-teal-600 mt-1" />
               <div className="text-gray-700">
                 <p className="font-semibold">Email Address</p>
-                <p>info@hamrodoctor.com</p>
+                <p>info@digitalhealthcaresystem.com</p>
               </div>
             </div>
           </div>
